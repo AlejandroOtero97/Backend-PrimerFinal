@@ -21,6 +21,8 @@ function soloParaAdmins(req, res, next) {
 routerApi.use(express.json())
 routerApi.use(express.urlencoded({ extended: true }))
 
+
+
 routerApi.get('/api/productos', controladoresApi.getProductos)
 routerApi.get('/api/productos/:idProducto', controladoresApi.getProducto)
 routerApi.post('/api/productos', soloParaAdmins, validateInformation(createProductSchema), controladoresApi.postProductos)
@@ -35,7 +37,9 @@ routerApi.post('/api/carrito', soloParaAdmins, validateInformation(createProduct
 routerApi.put('/api/carrito/:idProducto', soloParaAdmins, validateInformation(updateProductSchema), controladoresApi.putProducto)
 routerApi.delete('/api/carrito/:idProducto', soloParaAdmins, controladoresApi.deleteProducto)
 
-
+routerApi.get("*", (req, res) => {
+    res.send("Esta Ruta no existe, vuelva a intentar!")
+})
 
 
 module.exports = { routerApi }
