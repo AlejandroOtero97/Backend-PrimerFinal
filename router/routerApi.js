@@ -20,9 +20,7 @@ function soloParaAdmins(req, res, next) {
 
 routerApi.use(express.json())
 routerApi.use(express.urlencoded({ extended: true }))
-routerApi.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname + "/index.html"))
-})
+
 routerApi.get('/api/productos', controladoresApi.getProductos)
 routerApi.get('/api/productos/:idProducto', controladoresApi.getProducto)
 routerApi.post('/api/productos', soloParaAdmins, validateInformation(createProductSchema), controladoresApi.postProductos)
