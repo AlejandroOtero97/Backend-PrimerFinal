@@ -1,11 +1,6 @@
 const { databaseProductos } = require("../databases/databaseProductos.js")
 
 
-const serverInfo = {
-    os: 'windows',
-    framework: 'express'
-}
-
 const controladoresApi = {
     getProducto: (req, res) => {
         const id = req.params.idProducto

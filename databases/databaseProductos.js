@@ -1,7 +1,11 @@
-const res = require("express/lib/response")
+const { uuid } = require('uuidv4');
 
-function generarId() {  
+function generarTimeStamp() {  
     return `${Date.now()}`
+}
+
+function generarId() {
+    return uuid()
 }
 
 const productos = [
@@ -9,24 +13,32 @@ const productos = [
         id: "1",
         title: 'lapicera',
         price: 100,
+        timestamp: "1654204329254",
+        stock: 7,
         thumbnail: "https://www.shutterstock.com/es/image-photo/different-pens-55585345"
     },
     {
         id: "2",
         title: 'Mochila',
         price: 500,
+        timestamp: "1654204329254",
+        stock: 3,
         thumbnail: "https://www.shutterstock.com/es/image-photo/school-lunch-box-pink-backpack-on-1134685214"
     },
     {
         id: "3",
         title: 'Lapiz',
         price: 150,
+        timestamp: "1654204329254",
+        stock: 9,
         thumbnail: "https://www.shutterstock.com/es/image-photo/pencils-arrangement-isolated-on-white-background-1986526382"
     },
     {
         id: "4",
         title: 'Tijera',
         price: 350,
+        timestamp: "1654204329254",
+        stock: 11,
         thumbnail: "https://www.shutterstock.com/es/image-photo/green-scissors-isolated-on-white-background-1422866777"
     },
 ]
@@ -50,6 +62,7 @@ const databaseProductos = {
     agregarProducto: datos => {
         const producto = datos
         producto.id = generarId()
+        producto.timestamp = generarTimeStamp()
         productos.push(producto)
         return producto
     },

@@ -1,0 +1,26 @@
+[
+    {
+        "id": "1",
+        "title": "lapicera",
+        "price": 100,
+        "thumbnail": "https://www.shutterstock.com/es/image-photo/different-pens-55585345"
+    },
+    {
+        "id": "2",
+        "title": "Mochila",
+        "price": 500,
+        "thumbnail": "https://www.shutterstock.com/es/image-photo/school-lunch-box-pink-backpack-on-1134685214"
+    },
+    {
+        "id": "3",
+        "title": "Lapiz",
+        "price": 150,
+        "thumbnail": "https://www.shutterstock.com/es/image-photo/pencils-arrangement-isolated-on-white-background-1986526382"
+    },
+    {
+        "id": "4",
+        "title": "Tijera",
+        "price": 350,
+        "thumbnail": "https://www.shutterstock.com/es/image-photo/green-scissors-isolated-on-white-background-1422866777"
+    }
+]
