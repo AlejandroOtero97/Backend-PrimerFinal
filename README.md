@@ -1,3 +1,3 @@
 # Final 1ra Entrega
 
-Falta crear carrito para incorporar productos
+Primera entrega final para la materia de Backend
