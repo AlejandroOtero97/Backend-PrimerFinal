@@ -83,7 +83,8 @@ const databaseProductos = {
             productos[indiceBuscado] = producto
             return producto
         }
-    }
+    },
+    
 }
 
 module.exports = { databaseProductos }
